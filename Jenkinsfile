@@ -51,7 +51,7 @@ pipeline {
         stage('Deploy to EC2') {
             steps {
                 sh '''
-                ssh ec2-user@98.93.18.218"
+                ssh ec2-user@54.204.113.72"
                 docker pull $ECR_REPO:latest &&
                 docker stop nodeapp || true &&
                 docker rm nodeapp || true &&
